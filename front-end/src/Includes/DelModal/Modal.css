@@ -1,0 +1,8 @@
+.btn-box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-danger-modal {
+    margin-left: 20px;
+}

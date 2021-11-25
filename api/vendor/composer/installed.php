@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'reference' => NULL,
+        'name' => 'nox-0202/estagio',
+        'dev' => true,
+    ),
+    'versions' => array(
+        'coffeecode/datalayer' => array(
+            'pretty_version' => '1.1.4',
+            'version' => '1.1.4.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../coffeecode/datalayer',
+            'aliases' => array(),
+            'reference' => '17fecff8edb8fb5287648875f182acbb80389614',
+            'dev_requirement' => false,
+        ),
+        'coffeecode/router' => array(
+            'pretty_version' => '1.0.7',
+            'version' => '1.0.7.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../coffeecode/router',
+            'aliases' => array(),
+            'reference' => 'e3b94f72bc389e8b97d82a0fd0e5bff743e51667',
+            'dev_requirement' => false,
+        ),
+        'nox-0202/estagio' => array(
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'reference' => NULL,
+            'dev_requirement' => false,
+        ),
+    ),
+);

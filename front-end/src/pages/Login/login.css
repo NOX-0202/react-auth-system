@@ -1,0 +1,24 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 25rem;
+  }
+  
+.login-field-group {
+  
+    display: flex;
+    flex-direction: column;
+}
+
+.login-field-group input {
+    margin: .5rem 0 .5px 0;
+  }
+
+  #bottom {
+    margin-top: calc(100% - 68%);
+  }
+  .btn-enter {
+      background-color: #336688;
+      margin: .5rem 0;
+  }

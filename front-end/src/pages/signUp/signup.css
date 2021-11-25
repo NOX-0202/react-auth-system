@@ -1,0 +1,47 @@
+
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 25rem;
+  }
+  
+  .signup-container > * {
+    margin-bottom: 1rem;
+  }
+  
+  .signup-field-group {
+    display: flex;
+  }
+  
+  .signup-field-group input:first-of-type {
+    margin-right: 1.5rem;
+  }
+  
+  input, textarea, button {
+    border: 1px solid #DDDDDD;
+    font-family: inherit;
+    flex: 1 1 auto;
+    padding: .5rem;
+    color: #999;
+  }
+
+  .btn {
+    width: 100%;
+    border: none;
+    font-weight: 900;
+    color: #fff;
+    font-size: 1rem;
+  }
+
+  .btn-submit {
+    background-color: #338866;
+  }
+
+  .btn-back {
+    background-color: #999;
+  }
+  
+  input::placeholder {
+    font-weight: bold;
+  }

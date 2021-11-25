@@ -1,0 +1,55 @@
+.dash-main {
+    margin: 0 25%;
+}
+
+.addUser {
+    margin: 2.5rem 0 .5rem 0;
+    height: 40px;
+    background-color: #DDDDDD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-Users {
+    text-align: center;
+    font-weight: 900;
+}
+
+.users-list {
+    overflow: auto;
+    height: 350px;
+}
+
+.list-users {
+    overflow: auto;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    margin-bottom: .5rem ;
+}
+
+.list-users > * {
+    margin: 0;
+    padding: 0 1rem;
+}
+
+.right > img:nth-child(1) {
+    margin-right: 1rem;
+}
+
+.name {
+    font-weight: 900;
+    font-size: 1.5em;
+}
+
+.btn-danger {
+    width: 50%;
+    margin: 0 25%;
+    position: absolute;
+    top: calc(100vh - 8%);
+    left: 0;
+    background-color: #CC3333;
+}
