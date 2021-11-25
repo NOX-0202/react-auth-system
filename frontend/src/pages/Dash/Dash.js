@@ -8,13 +8,17 @@ import updateIcon from "../../assets/update.png"
 import delIcon from "../../assets/del.png"
 import './Dash.css'
 
-export default function Dash () {
+export default function Dash ({ history }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const modalText = useState('Deseja Deletar usuário?')
     const [users, setUsers] = useState([])
 
     const LoadModal = () => {
         setIsModalOpen(true);
+    }
+
+    const Logout = () => {
+        history.push(`/`)
     }
 
 
@@ -53,10 +57,10 @@ export default function Dash () {
                     ))}
                 </div>
            ) : (
-                <div className="no-Users">Sem usuarios</div>
+                <div className="no-Users" >Sem usuarios</div>
             )}
             
-            <button className="btn btn-danger">SAIR DO SISTEMA</button>
+            <button className="btn btn-danger" onClick={Logout}>SAIR DO SISTEMA</button>
         </div>
     )
     
