@@ -22,6 +22,7 @@ $router->get("/error/{errcode}", "Web:error", "Web.error");
 
 $router->post("/insert", "Dash:insert", "Dash.insert");
 $router->get("/read", "Dash:read", "Dash.read");
+$router->get("/getUser/{id}", "Dash:getUser", "Dash.getUser");
 $router->post("/update", "Dash:update", "Dash.update");
 $router->post("/delete/{id}", "Dash:delete", "Dash.delete");
 

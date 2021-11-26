@@ -21,7 +21,6 @@ export default function Dash ({ history }) {
         history.push(`/`)
     }
 
-
     useEffect( () => {
         async function ListUsers() {
             let users = await Api.get('/read')
@@ -49,7 +48,9 @@ export default function Dash ({ history }) {
                                 <p className="email">{user.email}</p>
                             </div>
                             <div className="right">
-                                <img src={updateIcon} alt="del" width="40px"/>
+                                <Link to={`/signup?id=${user.id}`}>
+                                    <img src={updateIcon} alt="del" width="40px"/>
+                                </Link>
                                 <img src={delIcon} alt="del" width="40px" onClick={LoadModal}/>
                                 { isModalOpen && <Modal isOpen={isModalOpen} setIsModalOpen={setIsModalOpen} modalText={modalText} id={user.id}/> }
                             </div>

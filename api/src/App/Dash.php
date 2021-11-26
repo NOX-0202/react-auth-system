@@ -8,6 +8,11 @@ class Dash
 
     public function insert($data)
     {
+        if (!empty($data["id"])) {
+            $this->update($data);
+            return;
+        }
+        
         $nome = filter_var($data["nome"], FILTER_SANITIZE_STRIPPED);
         $snome = filter_var($data["snome"], FILTER_SANITIZE_STRIPPED);
         $email = filter_var($data["email"], FILTER_VALIDATE_EMAIL);
@@ -33,6 +38,12 @@ class Dash
             echo json_encode(["error" => true, "err"=>$user->fail()->getMessage()]); 
         }
 
+    }
+
+    public function getUser($data) {
+        $id = (int) $data["id"];
+        $user = (new User())->findById($id);
+        echo json_encode($user->data());
     }
 
     public function read()

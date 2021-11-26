@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Input from '../../Includes/Input';
 import Modal from '../../Includes/SignModal/Modal';
@@ -21,7 +21,22 @@ const Form = () => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
     const modalText = useState('Usuário salvo com sucesso.')
- 
+
+    useEffect(() => {
+      const fillForm = async () => {
+    
+        let queryString = window.location.href.split('=');
+        console.log(queryString)
+  
+        if (queryString[1]) {
+          let user = await Api.get(`/getUser/${queryString[1]}`)
+          setForm(user.data)
+        }
+      }
+
+      fillForm()
+    }, [])
+    
     const onInputChange = ({ name, value }) => setForm({...form, [name]: value});
 
     const handleSubmit = async () => {
@@ -42,16 +57,17 @@ const Form = () => {
           <Square />
           <div className="signup-container"> 
           <div className="signup-field-group">
-              <Input type="text" name="nome" placeholder="Nome" value={form.name} onChange={(e) => onInputChange(e.target)}/>
-              <Input type="text" name="snome" placeholder="Sobrenome" value={form.lastName} onChange={(e) => onInputChange(e.target)}/>
+              <Input type="hidden" name="id" placeholder="id" value={form.id} onChange={(e) => onInputChange(e.target)}/>
+              <Input type="text" name="nome" placeholder="Nome" value={form.nome} onChange={(e) => onInputChange(e.target)}/>
+              <Input type="text" name="snome" placeholder="Sobrenome" value={form.snome} onChange={(e) => onInputChange(e.target)}/>
           </div>
             <Input type="email" name="email" placeholder="E-mail de contato" value={form.email} onChange={(e) => onInputChange(e.target)}/>
             <div className="signup-field-group">
-              <Input type="text" name="tel" placeholder="Telefone com DDD" value={form.phone} onChange={(e) => onInputChange(e.target)}/>
-              <Input type="password" name="pass" placeholder="Senha" value={form.password} onChange={(e) => onInputChange(e.target)}/>
+              <Input type="text" name="tel" placeholder="Telefone com DDD" value={form.tel} onChange={(e) => onInputChange(e.target)}/>
+              <Input type="password" name="pass" placeholder="Senha" value={form.pass} onChange={(e) => onInputChange(e.target)}/>
             </div>
             <div className="signup-field-group">
-              <Input type="text" name="nasc" placeholder="Data de Nascimento" value={form.birthDate} onChange={(e) => onInputChange(e.target)}/>
+              <Input type="text" name="nasc" placeholder="Data de Nascimento" value={form.nasc} onChange={(e) => onInputChange(e.target)}/>
               <Input type="text" name="cep" placeholder="CEP" value={form.cep} onChange={(e) => onInputChange(e.target)}/>
             </div>
             <Input type="textarea" name="obs" placeholder="Observações" value={form.obs} onChange={(e) => onInputChange(e.target)}/>
