@@ -9,14 +9,14 @@ use Exception;
  * User
  */
 class User extends DataLayer
-{     
+{
      /**
       * __construct
       *
       * @return void
       */
      function __construct() {
-        parent::__construct("users", [
+        parent::__construct("crud_test_intern", [
             "nome",
             "Snome",
             "email",
@@ -27,5 +27,5 @@ class User extends DataLayer
             "obs"
         ], "id", false);
     }
-    
+
 }

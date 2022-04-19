@@ -1,15 +1,15 @@
 <?php
     header('Access-Control-Allow-Origin: *');
 
-    define('SITE', "https://localhost/Projects/estagio/api");
+    define('SITE', "https://localhost/projetos/react-auth-system/api");
 
     define("DATA_LAYER_CONFIG", [
         "driver" => "mysql",
         "host" => "localhost",
         "port" => "3306",
-        "dbname" => "estagio",
+        "dbname" => "playground",
         "username" => "root",
-        "passwd" => "",
+        "passwd" => "!sec@1234",
         "options" => [
             PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8",
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,

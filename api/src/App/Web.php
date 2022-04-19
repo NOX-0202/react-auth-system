@@ -3,7 +3,7 @@
 namespace Source\App;
 use Source\Models\User;
 
-class Web 
+class Web
 {
 
     public function login($data)
@@ -37,6 +37,6 @@ class Web
 
     public function error($data)
     {
-        echo json_encode(["error" => $data["errcode"]]); 
+        echo json_encode(["error" => $data["errcode"]]);
     }
 }
